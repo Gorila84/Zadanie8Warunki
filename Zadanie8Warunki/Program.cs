@@ -1,33 +1,22 @@
-﻿int minMathResult;
-int minChemResult;
-int minPhysicsResult;
-int mathCandidateResult;
-int chemCandidateResult;
-int physicsCandidateResult;
-int sumOfPointCandidate;
-int sumMathResultAndChemResult;
-int sumMathResultAndPhisicsResult;
-
-minMathResult = 70;
-minPhysicsResult = 55;
-minChemResult = 45;
-
-Console.WriteLine("Podaj swój wynik z matematyki: ");
+﻿Console.WriteLine("Podaj swój wynik z matematyki: ");
 var enteredMathResult = Console.ReadLine();
-Int32.TryParse(enteredMathResult, out mathCandidateResult);
+Int32.TryParse(enteredMathResult, out int mathCandidateResult);
 
 Console.WriteLine("Podaj swój wynik z chemii: ");
 var enteredChemResult = Console.ReadLine();
-Int32.TryParse(enteredChemResult, out chemCandidateResult);
+Int32.TryParse(enteredChemResult, out int chemCandidateResult);
 
 Console.WriteLine("Podaj swój wynik z fizyki: ");
 var enteredPhisicsResult = Console.ReadLine();
-Int32.TryParse(enteredPhisicsResult, out physicsCandidateResult);
+Int32.TryParse(enteredPhisicsResult, out int physicsCandidateResult);
 
-sumOfPointCandidate = mathCandidateResult + physicsCandidateResult + chemCandidateResult;
+int sumOfPointCandidate = mathCandidateResult + physicsCandidateResult + chemCandidateResult;
+int sumMathResultAndChemResult = mathCandidateResult + chemCandidateResult;
+int sumMathResultAndPhisicsResult = mathCandidateResult + physicsCandidateResult;
 
-sumMathResultAndChemResult = mathCandidateResult + chemCandidateResult;
-sumMathResultAndPhisicsResult = mathCandidateResult + physicsCandidateResult;
+int minMathResult = 70;
+int minChemResult = 55;
+int minPhysicsResult = 45;
 
 if ((mathCandidateResult > minMathResult && 
    chemCandidateResult > minChemResult &&
